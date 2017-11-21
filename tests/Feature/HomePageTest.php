@@ -28,7 +28,7 @@ class HomePageTest extends TestCase
     public function hasRegistrationLink()
     {
         $this->get('/')
-             ->assertSee('Registration');
+             ->assertSee('Register');
     }
 
     /**
