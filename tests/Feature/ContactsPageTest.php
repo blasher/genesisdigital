@@ -28,7 +28,7 @@ class ContactPageTest extends TestCase
         $user->save();
 
         $this->user = User::findOrFail(1);
-        $this->assertEquals('Porky "Test User" Pig', $this->user->name() );
+        $this->assertEquals('Porky "Test User" Pig', $this->user->name );
     }
 
     /**
@@ -51,7 +51,8 @@ class ContactPageTest extends TestCase
      */
     public function hasAddContactLink()
     {
-        $this->get('/')
+        $this->actingAs($this->user)
+             ->get('home')
              ->assertSee('Add Contact');
     }
 
@@ -64,7 +65,8 @@ class ContactPageTest extends TestCase
      */
     public function hasSearchContactForm()
     {
-        $this->get('/')
+        $this->actingAs($this->user)
+             ->get('/home')
              ->assertSee('Search');
     }
 
@@ -76,7 +78,8 @@ class ContactPageTest extends TestCase
      */
     public function hasContactList()
     {
-        $this->get('/')
+        $this->actingAs($this->user)
+             ->get('/home')
              ->assertSee('Add Contact');
     }
 
