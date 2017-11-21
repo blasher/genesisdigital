@@ -10,6 +10,7 @@ class HomePageTest extends TestCase
     /**
      * A basic test example.
      *
+     * @test
      * @return void
      */
     public function testExample()
@@ -21,6 +22,7 @@ class HomePageTest extends TestCase
     /**
      * Registration Link Test.
      *
+     * @test
      * @return void
      */
     public function hasRegistrationLink()
@@ -32,6 +34,7 @@ class HomePageTest extends TestCase
     /**
      * Login Link Test.
      *
+     * @test
      * @return void
      */
     public function hasLoginLink()
@@ -43,6 +46,7 @@ class HomePageTest extends TestCase
     /**
      * FBConnect Link Test.
      *
+     * @test
      * @return void
      */
     public function hasFBConnectLink()
@@ -54,6 +58,7 @@ class HomePageTest extends TestCase
     /**
      * GitHubConnect Link Test.
      *
+     * @test
      * @return void
      */
     public function hasGitHubConnectLink()
