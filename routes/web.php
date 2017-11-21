@@ -24,10 +24,10 @@ Route::group(['middleware' => ['auth:web']], function () {
 
     // Contact Routes
 
-    Route::get('/contacts/',       'ContactController@index');
+    Route::get('/contact/',       'ContactController@index');
 
-    Route::get('/contacts/create', 'ContactController@create');
-    Route::post('/contacts/create', 'ContactController@store');
+    Route::get('/contact/create', 'ContactController@create');
+    Route::post('/contact/create', 'ContactController@store');
     
 
 });
