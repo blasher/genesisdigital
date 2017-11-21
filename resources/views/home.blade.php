@@ -8,11 +8,11 @@
 
                 <div class="panel-heading">
                        Contacts
-		</div>
+                </div>
 
                 <div class="panel-body">
                      <div class="col-md-6">
-                         <a href="/contacts/create/">Add Contact</a>
+                         <button type="button" class="btn" data-toggle="modal" data-target="#modalContactAdd">Add Contact</button>
                      </div>
 		     
                      <div class="col-md-6">
@@ -24,6 +24,8 @@
                        </form>
                      </div>
                 </div>
+
+                @include('modals.contact-add')
 		
             </div>
         </div>
