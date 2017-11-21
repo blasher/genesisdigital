@@ -18,3 +18,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth:web']], function () {
+
+    // Contact Routes
+
+    Route::get('/contacts/',       'ContactController@index');
+
+    Route::get('/contacts/create', 'ContactController@create');
+    Route::post('/contacts/create', 'ContactController@store');
+    
+
+});
+

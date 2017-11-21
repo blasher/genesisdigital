@@ -10,7 +10,7 @@
        </div>
      
        <div class="modal-body">
-           <form class="form" method="GET" action="">
+           <form class="form" method="POST" action="/contact/create/">
                {{ csrf_field() }}
 	       <div class="form-group">
                    <div class="form-group">
