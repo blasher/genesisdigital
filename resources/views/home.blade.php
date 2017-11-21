@@ -5,17 +5,26 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-heading">
+                       Contacts
+		</div>
 
                 <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                     <div class="col-md-6">
+                         <a href="/contacts/create/">Add Contact</a>
+                     </div>
+		     
+                     <div class="col-md-6">
+                       <form class="form-inline" method="GET" action="">
+                           {{ csrf_field() }}
 
-                    You are logged in!
+                           <input id="search" type="search" class="form-control" name="search" value="{{ old('search') }}" required autofocus>
+                           <button class="btn">Search</button>
+                       </form>
+                     </div>
                 </div>
+		
             </div>
         </div>
     </div>
