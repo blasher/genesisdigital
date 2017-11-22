@@ -14,29 +14,33 @@
                {{ csrf_field() }}
 	       <div class="form-group">
                    <div class="form-group">
-                       <label for="contact">Name</label>
-                       <input type="text" class="form-control" id="contact" aria-describedby="contact" placeholder="Enter name" value="{{ old('name') }}">
+                       <label for="name">Name</label>
+                       <input type="text" class="form-control" id="name" name="name" aria-describedby="name"
+                              placeholder="Enter name" value="{{ old('name') }}">
                    </div>
 	       </div>
 
 	       <div class="form-group">
                    <div class="form-group">
                        <label for="surname">Surname</label>
-                       <input type="text" class="form-control" id="surname" aria-describedby="surname" placeholder="Enter surname" value="{{ old('surname') }}">
+                       <input type="text" class="form-control" id="surname" name="surname" aria-describedby="surname"
+                              placeholder="Enter surname" value="{{ old('surname') }}">
                    </div>
 	       </div>
 	       
 	       <div class="form-group">
                    <div class="form-group">
                        <label for="email">Email</label>
-                       <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" value="{{ old('email') }}">
+                       <input type="text" class="form-control" id="email" name="email" aria-describedby="email"
+                              placeholder="Enter email" value="{{ old('email') }}">
                    </div>
 	       </div>
 
 	       <div class="form-group">
                    <div class="form-group">
                        <label for="phone">Phone</label>
-                       <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Enter phone" value="{{ old('phone') }}">
+                       <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phone"
+                              placeholder="Enter phone" value="{{ old('phone') }}">
                    </div>
 	       </div>
 	       
