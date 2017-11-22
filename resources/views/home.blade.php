@@ -16,7 +16,7 @@
                      </div>
 
                     <div class="col-md-6">
-                       <form class="form-inline" method="GET" action="">
+                       <form class="form-inline" method="POST" action="">
                            {{ csrf_field() }}
 
                            <input id="search" type="search" class="form-control" name="search" value="{{ old('search') }}" required autofocus>
@@ -27,30 +27,7 @@
 
                 @include('partials.errors')
 
-                <div class="panel-body">
-                     <table class="table">
-                     <thead>
-                         <th>Surname</th>
-                         <th>Name</th>
-                         <th>Email</th>
-                         <th>Phone</th>
-                         <th>Actions</th>
-                     </thead>
-                     @foreach($contacts as $contact)
-                     <tr>
-                         <td>{{ $contact->surname }}</td>
-                         <td>{{ $contact->name }}</td>
-                         <td>{{ $contact->email }}</td>
-                         <td>{{ $contact->phone }}</td>
-                         <td>
-			     <a href="#edit">Edit</a>
-			     <a href="#delete">Delete</a>
-			 </td>
-                     </tr>
-                     @endforeach
-
-                     </table>
-                </div>
+                @include('partials.contact-list')
     
                 @include('modals.contact-add')
 		
