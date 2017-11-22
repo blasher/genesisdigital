@@ -1,4 +1,4 @@
-<form class="form" method="POST" action="/contact/create/">
+<form class="form" id="contact-create-form" method="POST" action="/contact/create/">
     {{ csrf_field() }}
     <div class="form-group">
         <div class="form-group">
@@ -30,6 +30,12 @@
                 <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phone"
                        placeholder="Enter phone" value="{{ old('phone') }}">
             </div>
+    </div>
+
+    <div class="form-group">
+           <label for="additional_data">Additional Data</label><br />
+           <button type="button" class="btn btn-default" id="add_datum">+</button>
+           <button type="button" class="btn btn-default" id="del_datum">-</button>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
