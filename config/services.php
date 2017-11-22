@@ -14,6 +14,12 @@ return [
     |
     */
 
+    'facebook' => [
+        'domain' => env('FB_DOMAIN'),
+        'secret' => env('FB_SECRET'),
+        'redirect' => env('FB_REDIRECT'),
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
