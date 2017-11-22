@@ -19,6 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// FB oauth routes
+
+Route::get('/fb-redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/fb-callback', 'SocialAuthFacebookController@callback');
+
+// Application auth protected routes
 
 Route::group(['middleware' => ['auth:web']], function () {
 
