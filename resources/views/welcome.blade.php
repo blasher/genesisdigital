@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Connect with Facebook</a>
+                    <a href="{{ url('/fb-redirect') }}">Connect with Facebook</a>
                     <a href="https://laracasts.com">Connect with GitHub</a>
                 </div>
             </div>
