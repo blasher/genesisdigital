@@ -15,8 +15,8 @@ return [
     */
 
     'facebook' => [
-        'domain' => env('FB_DOMAIN'),
-        'secret' => env('FB_SECRET'),
+        'client_id' => env('FB_DOMAIN'),
+        'client_secret' => env('FB_SECRET'),
         'redirect' => env('FB_REDIRECT'),
     ],
 
